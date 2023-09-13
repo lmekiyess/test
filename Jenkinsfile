@@ -8,5 +8,12 @@ pipeline {
         }
       }
     }
+    stage("run another test"){
+      steps{
+        script {
+          sh "python -m pytest"
+        }
+      }  
+    }
   }
 }
