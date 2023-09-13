@@ -4,7 +4,7 @@ pipeline {
     stage("run test"){
       steps{
         script {
-          sh "pytest test_add.py"
+          sh "python -m pytest"
         }
       }
     }
