@@ -2,8 +2,10 @@ pipeline {
   agent any
   stages {
     stage("run test"){
-      script {
-        sh "pytest -m"
+      steps{
+        script {
+          sh "pytest -m"
+        }
       }
     }
   }
