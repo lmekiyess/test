@@ -3,17 +3,11 @@ pipeline {
   stages {
     stage("run test"){
       steps{
-        script {
-          sh "python -m pytest"
+        parallel(
+        a: { sh "python -m pytest" },
+        b: { sh "python -m pytest" } 
+          )  
         }
       }
     }
-    stage("run another test"){
-      steps{
-        script {
-          sh "python -m pytest"
-        }
-      }  
-    }
   }
-}
