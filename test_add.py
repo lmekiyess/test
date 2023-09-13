@@ -1,2 +1,4 @@
-def test_add():
-  assert add(2,2) == 4
+from add import add
+
+def test_add_function(a=2,b=2):
+  assert add(a,b) == 4
