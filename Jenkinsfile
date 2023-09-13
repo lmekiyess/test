@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage ("run test) {
+    stage("run test){
       script {
         sh "pytest -m"
       }
